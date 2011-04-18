@@ -21,11 +21,11 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Random banners');
 
 
-t3lib_extMgm::addLLrefForTCAdescr('tx_randombanners_domain_model_statistics', 'EXT:randombanners/Resources/Private/Language/locallang_csh_tx_randombanners_domain_model_statistics.xml');
-t3lib_extMgm::allowTableOnStandardPages('tx_randombanners_domain_model_statistics');
-$TCA['tx_randombanners_domain_model_statistics'] = array(
+t3lib_extMgm::addLLrefForTCAdescr('tx_randombanners_domain_model_banner', 'EXT:randombanners/Resources/Private/Language/locallang_csh_tx_randombanners_domain_model_banner.xml');
+t3lib_extMgm::allowTableOnStandardPages('tx_randombanners_domain_model_banner');
+$TCA['tx_randombanners_domain_model_banner'] = array(
 	'ctrl' => array(
-		'title'				=> 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_statistics',
+		'title'				=> 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner',
 		'label' 			=> 'displayed_this_month',
 		'tstamp' 			=> 'tstamp',
 		'crdate' 			=> 'crdate',
@@ -42,8 +42,8 @@ $TCA['tx_randombanners_domain_model_statistics'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 			),
-		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Statistics.php',
-		'iconfile' 			=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_randombanners_domain_model_statistics.gif'
+		'dynamicConfigFile' => t3lib_extMgm::extPath($_EXTKEY) . 'Configuration/TCA/Banner.php',
+		'iconfile' 			=> t3lib_extMgm::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_randombanners_domain_model_banner.gif'
 	),
 );
 

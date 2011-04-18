@@ -7,11 +7,11 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'List',
 	array(
-		'Statistics' => 'list',
+		'Banner' => 'list',
 		
 	),
 	array(
-		'Statistics' => 'list',
+		'Banner' => 'list',
 		
 	)
 );

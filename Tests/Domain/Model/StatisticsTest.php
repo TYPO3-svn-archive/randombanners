@@ -25,7 +25,7 @@
 ***************************************************************/
 
 /**
- * Testcase for class Tx_Randombanners_Domain_Model_Statistics.
+ * Testcase for class Tx_Randombanners_Domain_Model_Banner.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -36,14 +36,14 @@
  * 
  * @author Thomas Loeffler <loeffler@spooner-web.de>
  */
-class Tx_Randombanners_Domain_Model_StatisticsTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
+class Tx_Randombanners_Domain_Model_BannerTest extends Tx_Extbase_Tests_Unit_BaseTestCase {
 	/**
-	 * @var Tx_Randombanners_Domain_Model_Statistics
+	 * @var Tx_Randombanners_Domain_Model_Banner
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new Tx_Randombanners_Domain_Model_Statistics();
+		$this->fixture = new Tx_Randombanners_Domain_Model_Banner();
 	}
 
 	public function tearDown() {

@@ -1,7 +1,7 @@
 #
-# Table structure for table 'tx_randombanners_domain_model_statistics'
+# Table structure for table 'tx_randombanners_domain_model_banner'
 #
-CREATE TABLE tx_randombanners_domain_model_statistics (
+CREATE TABLE tx_randombanners_domain_model_banner (
 	uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 	

@@ -26,7 +26,28 @@
 /**
  * Statistics for clicking and displaying banners
  */
-class Tx_Randombanners_Domain_Model_Statistics extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_Randombanners_Domain_Model_Banner extends Tx_Extbase_DomainObject_AbstractEntity {
+
+	/**
+	 * name
+	 *
+	 * @var string
+	 */
+	protected $name;
+
+	/**
+	 * link
+	 *
+	 * @var string
+	 */
+	protected $link;
+
+	/**
+	 * logo
+	 *
+	 * @var integer
+	 */
+	protected $logo;
 
 	/**
 	 * displayedThisMonth
@@ -55,6 +76,51 @@ class Tx_Randombanners_Domain_Model_Statistics extends Tx_Extbase_DomainObject_A
 	 * @var string
 	 */
 	protected $clickedLastMonth;
+
+	/**
+	 * @param string $name
+	 * @return void
+	 */
+	public function setName($name) {
+		$this->name = $name;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getName() {
+		return $this->name;
+	}
+
+	/**
+	 * @param string $link
+	 * @return void
+	 */
+	public function setLink($link) {
+		$this->link = $link;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getLink() {
+		return $this->link;
+	}
+
+	/**
+	 * @param integer $logo
+	 * @return void
+	 */
+	public function setLogo($logo) {
+		$this->logo = $logo;
+	}
+
+	/**
+	 * @return integer
+	 */
+	public function getLogo() {
+		return $this->logo;
+	}
 
 	/**
 	 * @param integer $displayedThisMonth

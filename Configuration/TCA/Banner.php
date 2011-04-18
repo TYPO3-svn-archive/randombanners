@@ -3,8 +3,8 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_randombanners_domain_model_statistics'] = array(
-	'ctrl' => $TCA['tx_randombanners_domain_model_statistics']['ctrl'],
+$TCA['tx_randombanners_domain_model_banner'] = array(
+	'ctrl' => $TCA['tx_randombanners_domain_model_banner']['ctrl'],
 	'interface' => array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, displayed_this_month, clicked_this_month, displayed_last_month, clicked_last_month',
 	),
@@ -37,8 +37,8 @@ $TCA['tx_randombanners_domain_model_statistics'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_randombanners_domain_model_statistics',
-				'foreign_table_where' => 'AND tx_randombanners_domain_model_statistics.pid=###CURRENT_PID### AND tx_randombanners_domain_model_statistics.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_randombanners_domain_model_banner',
+				'foreign_table_where' => 'AND tx_randombanners_domain_model_banner.pid=###CURRENT_PID### AND tx_randombanners_domain_model_banner.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,9 +93,30 @@ $TCA['tx_randombanners_domain_model_statistics'] = array(
 				),
 			),
 		),
+		'name' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner.name',
+			'config'  => array(
+				'type' => 'input',
+				'size' => 20,
+				'eval' => 'trim,required',
+				'max'  => 256
+			)
+		),
+		'link' => array(
+			'exclude' => 0,
+			'label'   => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner.link',
+			'config'  => array(
+				'type' => 'input',
+				'size' => 20,
+				'eval' => 'trim,required',
+				'max'  => 256
+			)
+		),
+		'logo' => txdam_getMediaTCA('image_field'),
 		'displayed_this_month' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_statistics.displayed_this_month',
+			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner.displayed_this_month',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
@@ -104,7 +125,7 @@ $TCA['tx_randombanners_domain_model_statistics'] = array(
 		),
 		'clicked_this_month' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_statistics.clicked_this_month',
+			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner.clicked_this_month',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
@@ -113,7 +134,7 @@ $TCA['tx_randombanners_domain_model_statistics'] = array(
 		),
 		'displayed_last_month' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_statistics.displayed_last_month',
+			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner.displayed_last_month',
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
@@ -122,7 +143,7 @@ $TCA['tx_randombanners_domain_model_statistics'] = array(
 		),
 		'clicked_last_month' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_statistics.clicked_last_month',
+			'label' => 'LLL:EXT:randombanners/Resources/Private/Language/locallang_db.xml:tx_randombanners_domain_model_banner.clicked_last_month',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,

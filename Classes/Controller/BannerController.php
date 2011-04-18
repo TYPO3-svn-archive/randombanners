@@ -23,11 +23,35 @@
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
 
-
 /**
- * Repository for Tx_Randombanners_Domain_Model_Statistics
+ * Controller for the Banner object
  */
-class Tx_Randombanners_Domain_Repository_StatisticsRepository extends Tx_Extbase_Persistence_Repository {
+class Tx_Randombanners_Controller_BannerController extends Tx_Extbase_MVC_Controller_ActionController {
+
+	/**
+	 * @var Tx_Randombanners_Domain_Repository_BannerRepository
+	 */
+	protected $bannerRepository;
+
+	/**
+	 * @param Tx_Randombanners_Domain_Repository_BannerRepository $bannerRepository
+ 	 * @return void
+	 */
+	public function injectBannerRepository(Tx_Randombanners_Domain_Repository_BannerRepository $bannerRepository) {
+		$this->bannerRepository = $bannerRepository;
+	}
+
+
+	/**
+	 * Displays all Statistics
+	 *
+	 * @return void
+	 */
+	public function listAction() {
+		$banners = $this->bannerRepository->findRandom();
+		$this->view->assign('banners', $banners);
+	}
+
 
 }
 ?>
