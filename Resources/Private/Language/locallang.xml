@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Banner management extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_randombanners_domain_model_statistics">Statistics for clicking and displaying banners</label>
+			<label index="tx_randombanners_domain_model_statistics.displayed_this_month">displayedThisMonth</label>
+			<label index="tx_randombanners_domain_model_statistics.clicked_this_month">clickedThisMonth</label>
+			<label index="tx_randombanners_domain_model_statistics.displayed_last_month">displayedLastMonth</label>
+			<label index="tx_randombanners_domain_model_statistics.clicked_last_month">clickedLastMonth</label>
+		</languageKey>
+	</data>
+</T3locallang>
