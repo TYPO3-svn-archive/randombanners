@@ -5,11 +5,15 @@ CREATE TABLE tx_randombanners_domain_model_banner (
 	uid int(11) unsigned DEFAULT '0' NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 	
-	
+
+	name varchar(255) DEFAULT '' NOT NULL,
+	link varchar(255) DEFAULT '' NOT NULL,
+	email varchar(255) DEFAULT '' NOT NULL,
+	logo tinyint(4) DEFAULT '0' NOT NULL,
 	displayed_this_month int(11) DEFAULT '0' NOT NULL,
 	clicked_this_month int(11) DEFAULT '0' NOT NULL,
 	displayed_last_month int(11) DEFAULT '0' NOT NULL,
-	clicked_last_month varchar(255) DEFAULT '' NOT NULL,
+	clicked_last_month int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

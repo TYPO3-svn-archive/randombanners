@@ -29,5 +29,19 @@
  */
 class Tx_Randombanners_Domain_Repository_BannerRepository extends Tx_Extbase_Persistence_Repository {
 
+	public function findRandomBanners() {
+		$query = $this->createQuery();
+
+		// Workaround for random ordering until Extbase doesn't support this
+		// See: http://lists.typo3.org/pipermail/typo3-project-typo3v4mvc/2010-July/005870.html
+		$backend = $this->objectManager->get('Tx_Extbase_Persistence_Storage_Typo3DbBackend');
+		$parameters = array();
+		$statementParts = $backend->parseQuery($query, $parameters);
+		$statementParts['orderings'][] = ' RAND()';
+		$statement = $backend->buildQuery($statementParts, $parameters);
+		$query->statement($statement, $parameters);
+
+		return $query->execute();
+	}
 }
 ?>

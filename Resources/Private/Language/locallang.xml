@@ -11,6 +11,8 @@
 			<label index="tx_randombanners_domain_model_banner.clicked_this_month">clickedThisMonth</label>
 			<label index="tx_randombanners_domain_model_banner.displayed_last_month">displayedLastMonth</label>
 			<label index="tx_randombanners_domain_model_banner.clicked_last_month">clickedLastMonth</label>
+			<label index="tx_randombanners_task_sendingmonthlymailstask.name">Sending monthly mails</label>
+			<label index="tx_randombanners_task_sendingmonthlymailstask.description">Sending monthly mails to all banner sponsors with the click and displaying rate of the last month</label>
 		</languageKey>
 	</data>
 </T3locallang>

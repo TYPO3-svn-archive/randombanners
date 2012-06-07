@@ -43,6 +43,13 @@ class Tx_Randombanners_Domain_Model_Banner extends Tx_Extbase_DomainObject_Abstr
 	protected $link;
 
 	/**
+	 * email
+	 *
+	 * @var string
+	 */
+	protected $email;
+
+	/**
 	 * logo
 	 *
 	 * @var integer
@@ -120,6 +127,21 @@ class Tx_Randombanners_Domain_Model_Banner extends Tx_Extbase_DomainObject_Abstr
 	 */
 	public function getLogo() {
 		return $this->logo;
+	}
+
+	/**
+	 * @param string $email
+	 * @return void
+	 */
+	public function setEmail($email) {
+		$this->email = $email;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getEmail() {
+		return $this->email;
 	}
 
 	/**
